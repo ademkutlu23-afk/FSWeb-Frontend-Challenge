@@ -72,3 +72,81 @@ button {
   color: #ffffff;
   opacity: 0.7;
 }
+/* HERO */
+
+.hero {
+  min-height: 520px;
+  display: flex;
+  background: #4731d3;
+}
+
+.hero-left {
+  width: 65%;
+  padding: 80px;
+  color: #ffffff;
+}
+
+.hero-right {
+  width: 35%;
+  background: #cbf281;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-small-text {
+  font-size: 18px;
+  margin: 0 0 24px;
+}
+
+.hero-title {
+  font-size: 48px;
+  line-height: 1.15;
+  margin: 0 0 24px;
+  font-weight: 700;
+}
+
+.hero-description {
+  max-width: 560px;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0 0 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.hero-button {
+  padding: 12px 24px;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #4731d3;
+  font-weight: 700;
+  border: 1px solid #ffffff;
+}
+
+.hero-button.secondary {
+  background: transparent;
+  color: #ffffff;
+}
+
+.hero-button:hover {
+  opacity: 0.85;
+}
+
+.hero-image-placeholder {
+  width: 280px;
+  height: 360px;
+  background: #ffffff;
+  color: #4731d3;
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+}
