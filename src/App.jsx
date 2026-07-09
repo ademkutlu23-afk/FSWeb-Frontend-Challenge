@@ -1,8 +1,13 @@
+import Hero from "./components/Hero";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+
 function App() {
   return (
     <main>
-      <h1>Workintech Frontend Challenge</h1>
-      <p>Portfolio projesi başladı.</p>
+      <Hero />
+      <Skills />
+      <Projects />
     </main>
   );
 }
