@@ -6,14 +6,46 @@ export const profileData = {
   github: "https://github.com/ademkutlu23-afk",
   linkedin: "",
 };
+ export const profileInfo = {
+  birthDate :"1992",
+  city : "Balıkesir",
+  education : "Workintech Full Stack Web Development Program",
+  role:"Frontend Developer",
+  about: "Frontend tarafında React ve JavaScript öğreniyorum. Bu projede component yapısı, veri akışı,javascript,css ve responsive tasarım konularını pekiştirmeye çalışıyorum.",
+};
+
 
 export const skills = [
-  "JavaScript",
-  "React",
-  "HTML",
-  "CSS",
-  "Tailwind CSS",
-  "Git",
+  {
+    id: 1,
+    name: "JavaScript",
+    description: "DOM işlemleri, array metotları ve temel mantık kısmında kullanıyorum.",
+  },
+  {
+    id: 2,
+    name: "React",
+    description: "Component mantığı, props ve state konularını projelerle pekiştiriyorum.",
+  },
+  {
+    id: 3,
+    name: "HTML",
+    description: "Sayfanın temel yapısını kurmak ve bölümleri düzenlemek için kullanıyorum.",
+  },
+  {
+    id: 4,
+    name: "CSS",
+    description: "Tasarımı ekrana dökmek, renkleri/stilleri ayarlamak ve sayfa düzenini oluşturmak için kullanıyorum.",
+  },
+  {
+    id: 5,
+    name: "Git",
+    description: "Projeyi kaydetmek, commit atmak ve GitHub'a göndermek için kullanıyorum.",
+  },
+  {
+    id: 6,
+    name: "Figma",
+    description: "Tasarımı incelemek, renkleri ve sayfa yerleşimini anlamak için kullanıyorum.",
+  },
 ];
 
 export const projects = [

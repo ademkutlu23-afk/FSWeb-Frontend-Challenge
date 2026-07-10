@@ -2,14 +2,17 @@ import { skills } from "../data/data";
 
 function Skills() {
   return (
-    <section>
-      <h2>Yetenekler</h2>
+    <section className="skills-section">
+      <h2 className="section-title">Skills</h2>
 
-      <ul>
-        {skills.map((skill, index) => (
-          <li key={index}>{skill}</li>
+      <div className="skills-list">
+        {skills.map((skill) => (
+          <article className="skill-card" key={skill.id}>
+            <h3>{skill.name}</h3>
+            <p>{skill.description}</p>
+          </article>
         ))}
-      </ul>
+      </div>
     </section>
   );
 }

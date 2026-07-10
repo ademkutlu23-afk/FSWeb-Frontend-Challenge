@@ -150,3 +150,53 @@ button {
 
   font-weight: 700;
 }
+.profile-section {
+  background: #4731d3;
+  padding: 80px;
+  color: white;
+}
+
+.profile-title {
+  font-size: 36px;
+  margin: 0 0 32px;
+  color: #cbf281;
+}
+
+.profile-content {
+  display: grid;
+  grid-template-columns: 1fr 260px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.profile-info h3,
+.profile-about h3 {
+  margin: 0 0 20px;
+  font-size: 22px;
+}
+
+.profile-info p,
+.profile-about p {
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0 0 14px;
+}
+
+.profile-info strong {
+  display: inline-block;
+  width: 120px;
+}
+
+.profile-image-placeholder {
+  width: 260px;
+  height: 220px;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #4731d3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+}
