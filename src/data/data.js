@@ -55,15 +55,15 @@ export const projects = [
   {
     id: 1,
     araclar: ["React", "CSS", "Form"],
-    github: "",
-    live: "",
+    github: "https://github.com/ademkutlu23-afk/Pizzaproje",
+    live: "https://pizzaproje.vercel.app/",
   },
   {
-    id: 2,
-    araclar: ["React", "Axios", "API"],
-    github: "",
-    live: "",
-  },
+  id: 2,
+  araclar: ["React", "CSS", "useState"],
+  github: "https://github.com/ademkutlu23-afk/patidose",
+  live: "https://patidose.vercel.app/",
+},
 ];
 
 export const sayfaVerileri = {
@@ -104,13 +104,13 @@ export const sayfaVerileri = {
         liveText: "Canlı Site",
       },
       {
-        id: 2,
-        title: "Rastgele Şaka Projesi",
-        description:
-          "Butona basınca yeni şaka getiren küçük bir React projesi. API ve hata yönetimi pratiği için yaptım.",
-        githubText: "GitHub",
-        liveText: "Canlı Site",
-      },
+  id: 2,
+  title: "PatiDose",
+  description:
+    "Evcil hayvanların aşı, iç parazit, dış parazit ve kontrol tarihlerini takip etmeye yarayan küçük bir React uygulaması.",
+  githubText: "GitHub",
+  liveText: "Canlı Site",
+},
     ],
 
     contact: {
@@ -160,13 +160,13 @@ export const sayfaVerileri = {
         liveText: "Live Site",
       },
       {
-        id: 2,
-        title: "Random Jokes Project",
-        description:
-          "A small React project that fetches a new joke when the button is clicked. I practiced API usage and error handling.",
-        githubText: "GitHub",
-        liveText: "Live Site",
-      },
+  id: 2,
+  title: "PatiDose",
+  description:
+    "A small React app for tracking pet vaccine, internal parasite, external parasite and check-up dates.",
+  githubText: "GitHub",
+  liveText: "Live Site",
+},
     ],
 
     contact: {
