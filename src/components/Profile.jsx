@@ -32,7 +32,9 @@ function Profile() {
           </p>
         </div>
 
-        <div className="profile-image-placeholder">Fotoğraf</div>
+        <div className="profile-image-placeholder">
+  <span className="avatar-text">AK</span>
+</div>
 
         <div className="profile-about">
           <h3>{profileText.aboutTitle}</h3>

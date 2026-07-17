@@ -39,7 +39,9 @@ function Hero() {
       </div>
 
       <div className="hero-right">
-        <div className="hero-image-placeholder">Fotoğraf</div>
+        <div className="hero-image-placeholder">
+  <span className="avatar-text">AK</span>
+</div>
       </div>
     </section>
   );
