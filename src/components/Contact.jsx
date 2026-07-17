@@ -1,26 +1,28 @@
-function Contact() {
-  return (
-    <footer className="contact-section">
-      <h2>Send me a message!</h2>
+import { profileData, sayfaVerileri } from "../data/data";
+import { useSiteContext } from "../context/SiteContext";
 
-      <p>
-        Bir proje, soru ya da iş fikri için bana ulaşabilirsin.
-      </p>
+function Contact() {
+  const { dil } = useSiteContext();
+  const contactText = sayfaVerileri[dil].contact;
+
+  return (
+    <section className="contact-section">
+      <h2>{contactText.title}</h2>
+
+      <p>{contactText.description}</p>
 
       <div className="contact-links">
-        <a href="https://github.com/ademkutlu23-afk" target="_blank">
-          GitHub
+        <a href="mailto:adem@example.com">{contactText.emailText}</a>
+
+        <a href={profileData.github} target="_blank" rel="noreferrer">
+          {contactText.githubText}
         </a>
 
-        <a href="#" target="_blank">
-          LinkedIn
-        </a>
-
-        <a href="mailto:mailadresin@gmail.com">
-          Mail
+        <a href={profileData.linkedin || "#"} target="_blank" rel="noreferrer">
+          {contactText.linkedinText}
         </a>
       </div>
-    </footer>
+    </section>
   );
 }
 

@@ -111,6 +111,15 @@ export const sayfaVerileri = {
         liveText: "Canlı Site",
       },
     ],
+
+    contact: {
+      title: "İletişim",
+      description:
+        "Benimle iletişime geçmek istersen aşağıdaki bağlantıları kullanabilirsin.",
+      emailText: "E-posta",
+      githubText: "GitHub",
+      linkedinText: "LinkedIn",
+    },
   },
 
   en: {
@@ -158,5 +167,13 @@ export const sayfaVerileri = {
         liveText: "Live Site",
       },
     ],
+
+    contact: {
+      title: "Contact",
+      description: "You can use the links below if you want to contact me.",
+      emailText: "Email",
+      githubText: "GitHub",
+      linkedinText: "LinkedIn",
+    },
   },
 };
