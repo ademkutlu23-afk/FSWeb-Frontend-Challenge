@@ -561,3 +561,39 @@ button {
     gap: 10px;
   }
 }
+.contact-section {
+  background: #ffffff;
+  padding: 80px;
+  text-align: center;
+  color: #4731d3;
+}
+
+.contact-section h2 {
+  font-size: 36px;
+  margin: 0 0 16px;
+}
+
+.contact-section p {
+  max-width: 420px;
+  margin: 0 auto 18px;
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+.contact-mail {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #4731d3;
+  font-weight: 700;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-links a {
+  color: #4731d3;
+  font-weight: 700;
+}
