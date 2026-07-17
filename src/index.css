@@ -344,3 +344,31 @@ button {
   color: #4731d3;
   font-weight: 700;
 }
+.contact-section {
+  background: #ffffff;
+  padding: 80px;
+  text-align: center;
+  color: #4731d3;
+}
+
+.contact-section h2 {
+  font-size: 36px;
+  margin: 0 0 16px;
+}
+
+.contact-section p {
+  margin: 0 0 28px;
+  color: #4b5563;
+  font-size: 16px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.contact-links a {
+  font-weight: 700;
+  color: #4731d3;
+}
