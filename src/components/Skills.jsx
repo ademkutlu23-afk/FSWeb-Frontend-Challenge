@@ -7,9 +7,9 @@ function Skills() {
 
       <div className="skills-list">
         {skills.map((skill) => (
-          <article className="skill-card" key={skill.id}>
-            <h3>{skill.name}</h3>
-            <p>{skill.description}</p>
+          <article className="skill-item" key={skill.id}>
+            <div className="skill-icon">{skill.name.slice(0, 2)}</div>
+            <span>{skill.name}</span>
           </article>
         ))}
       </div>

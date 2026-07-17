@@ -51,17 +51,17 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-    title: "Pizza Project",
-    description: "React ile hazırlanmış sipariş formu projesi.",
+    title: "Pizza Order Project",
+    description: "HTML ve CSS ile başladığım pizza sipariş sayfasını React form mantığıyla geliştirmeyi planlıyorum.",
     technologies: ["React", "CSS", "Form"],
     github: "",
     live: "",
   },
   {
     id: 2,
-    title: "Portfolio Website",
-    description: "Kişisel portfolio sitesi.",
-    technologies: ["React", "Vite", "CSS"],
+    title: "Random Jokes",
+    description: "Butona basınca yeni şaka getiren küçük bir React projesi. API, loading ve hata yönetimi pratiği için.",
+    technologies: ["React", "Axios", "API"],
     github: "",
     live: "",
   },
