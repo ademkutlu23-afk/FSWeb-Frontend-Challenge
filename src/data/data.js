@@ -1,68 +1,162 @@
 export const profileData = {
   name: "Adem Kutlu",
-  title: "Frontend Developer",
-  description:
-    "React, JavaScript ve modern web teknolojileri ile kullanıcı dostu arayüzler geliştiriyorum.",
   github: "https://github.com/ademkutlu23-afk",
   linkedin: "",
 };
- export const profileInfo = {
-  birthDate :"1992",
-  city : "Balıkesir",
-  education : "Workintech Full Stack Web Development Program",
-  role:"Frontend Developer",
-  about: "Frontend tarafında React ve JavaScript öğreniyorum. Bu projede component yapısı, veri akışı,javascript,css ve responsive tasarım konularını pekiştirmeye çalışıyorum.",
-};
 
+export const profileInfo = {
+  birthDate: "1992",
+  city: "Balıkesir",
+  education: "Workintech Full Stack Web Development Program",
+  role: "Frontend Developer",
+};
 
 export const skills = [
   {
     id: 1,
     name: "JavaScript",
-    description: "DOM işlemleri, array metotları ve temel mantık kısmında kullanıyorum.",
+    description:
+      "DOM işlemleri, array metotları ve temel mantık kısmında kullanıyorum.",
   },
   {
     id: 2,
     name: "React",
-    description: "Component mantığı, props ve state konularını projelerle pekiştiriyorum.",
+    description:
+      "Component mantığı, props ve state konularını projelerle pekiştiriyorum.",
   },
   {
     id: 3,
     name: "HTML",
-    description: "Sayfanın temel yapısını kurmak ve bölümleri düzenlemek için kullanıyorum.",
+    description:
+      "Sayfanın temel yapısını kurmak ve bölümleri düzenlemek için kullanıyorum.",
   },
   {
     id: 4,
     name: "CSS",
-    description: "Tasarımı ekrana dökmek, renkleri/stilleri ayarlamak ve sayfa düzenini oluşturmak için kullanıyorum.",
+    description:
+      "Tasarımı ekrana dökmek, renkleri ayarlamak ve sayfa düzenini yapmak için kullanıyorum.",
   },
   {
     id: 5,
     name: "Git",
-    description: "Projeyi kaydetmek, commit atmak ve GitHub'a göndermek için kullanıyorum.",
+    description:
+      "Projeyi kaydetmek, commit atmak ve GitHub'a göndermek için kullanıyorum.",
   },
   {
     id: 6,
     name: "Figma",
-    description: "Tasarımı incelemek, renkleri ve sayfa yerleşimini anlamak için kullanıyorum.",
+    description:
+      "Tasarımı incelemek, renkleri ve sayfa yerleşimini anlamak için kullanıyorum.",
   },
 ];
 
 export const projects = [
   {
     id: 1,
-    title: "Pizza Order Project",
-    description: "HTML ve CSS ile başladığım pizza sipariş sayfasını React form mantığıyla geliştirmeyi planlıyorum.",
-    technologies: ["React", "CSS", "Form"],
+    araclar: ["React", "CSS", "Form"],
     github: "",
     live: "",
   },
   {
     id: 2,
-    title: "Random Jokes",
-    description: "Butona basınca yeni şaka getiren küçük bir React projesi. API, loading ve hata yönetimi pratiği için.",
-    technologies: ["React", "Axios", "API"],
+    araclar: ["React", "Axios", "API"],
     github: "",
     live: "",
   },
 ];
+
+export const sayfaVerileri = {
+  tr: {
+    hero: {
+      smallText: "Merhaba 👋",
+      title: "Ben Adem Kutlu.",
+      job: "Frontend Developer",
+      description:
+        "React ve JavaScript öğreniyorum. Bu projede component, veri akışı ve responsive tasarım konularını pekiştiriyorum.",
+      githubText: "GitHub",
+      linkedinText: "LinkedIn",
+    },
+
+    skillsTitle: "Yetenekler",
+
+    profile: {
+      title: "Profil",
+      basicTitle: "Temel Bilgiler",
+      aboutTitle: "Hakkımda",
+      birthDateLabel: "Doğum Yılı",
+      cityLabel: "Şehir",
+      educationLabel: "Eğitim",
+      roleLabel: "Rol",
+      about:
+        "Frontend tarafında React ve JavaScript öğreniyorum. Bu projede component yapısı, veri akışı, JavaScript, CSS ve responsive tasarım konularını pekiştirmeye çalışıyorum.",
+    },
+
+    projectsTitle: "Projeler",
+
+    projectTexts: [
+      {
+        id: 1,
+        title: "Pizza Sipariş Projesi",
+        description:
+          "Pizza sipariş sayfası üzerinden form, seçimler ve toplam fiyat mantığını çalıştığım küçük bir React projesi.",
+        githubText: "GitHub",
+        liveText: "Canlı Site",
+      },
+      {
+        id: 2,
+        title: "Rastgele Şaka Projesi",
+        description:
+          "Butona basınca yeni şaka getiren küçük bir React projesi. API ve hata yönetimi pratiği için yaptım.",
+        githubText: "GitHub",
+        liveText: "Canlı Site",
+      },
+    ],
+  },
+
+  en: {
+    hero: {
+      smallText: "Hi 👋",
+      title: "I am Adem Kutlu.",
+      job: "Frontend Developer",
+      description:
+        "I am learning React and JavaScript. In this project, I practice components, data flow and responsive design.",
+      githubText: "GitHub",
+      linkedinText: "LinkedIn",
+    },
+
+    skillsTitle: "Skills",
+
+    profile: {
+      title: "Profile",
+      basicTitle: "Basic Information",
+      aboutTitle: "About Me",
+      birthDateLabel: "Birth Year",
+      cityLabel: "City",
+      educationLabel: "Education",
+      roleLabel: "Role",
+      about:
+        "I am learning React and JavaScript on the frontend side. In this project, I practice components, data flow, JavaScript, CSS and responsive design.",
+    },
+
+    projectsTitle: "Projects",
+
+    projectTexts: [
+      {
+        id: 1,
+        title: "Pizza Order Project",
+        description:
+          "A small React project where I practiced form inputs, selections and total price logic.",
+        githubText: "GitHub",
+        liveText: "Live Site",
+      },
+      {
+        id: 2,
+        title: "Random Jokes Project",
+        description:
+          "A small React project that fetches a new joke when the button is clicked. I practiced API usage and error handling.",
+        githubText: "GitHub",
+        liveText: "Live Site",
+      },
+    ],
+  },
+};

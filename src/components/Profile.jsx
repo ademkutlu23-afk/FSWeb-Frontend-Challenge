@@ -1,27 +1,42 @@
-import { profileInfo } from "../data/data";
+import { profileInfo, sayfaVerileri } from "../data/data";
+import { useSiteContext } from "../context/SiteContext";
 
 function Profile() {
+  const { dil } = useSiteContext();
+  const profileText = sayfaVerileri[dil].profile;
+
   return (
     <section className="profile-section">
-      <h2 className="profile-title">Profile</h2>
+      <h2 className="profile-title">{profileText.title}</h2>
 
       <div className="profile-content">
         <div className="profile-info">
-          <h3>Basic Information</h3>
+          <h3>{profileText.basicTitle}</h3>
 
-          <p><strong>Doğum tarihi</strong> {profileInfo.birthDate}</p>
-          <p><strong>Şehir</strong> {profileInfo.city}</p>
-          <p><strong>Eğitim Durumu</strong> {profileInfo.education}</p>
-          <p><strong>Tercih Ettiği Rol</strong> {profileInfo.role}</p>
+          <p>
+            <strong>{profileText.birthDateLabel}:</strong>{" "}
+            {profileInfo.birthDate}
+          </p>
+
+          <p>
+            <strong>{profileText.cityLabel}:</strong> {profileInfo.city}
+          </p>
+
+          <p>
+            <strong>{profileText.educationLabel}:</strong>{" "}
+            {profileInfo.education}
+          </p>
+
+          <p>
+            <strong>{profileText.roleLabel}:</strong> {profileInfo.role}
+          </p>
         </div>
 
-        <div className="profile-image-box">
-          <div className="profile-image-placeholder">Görsel</div>
-        </div>
+        <div className="profile-image-placeholder">Fotoğraf</div>
 
         <div className="profile-about">
-          <h3>About Me</h3>
-          <p>{profileInfo.about}</p>
+          <h3>{profileText.aboutTitle}</h3>
+          <p>{profileText.about}</p>
         </div>
       </div>
     </section>

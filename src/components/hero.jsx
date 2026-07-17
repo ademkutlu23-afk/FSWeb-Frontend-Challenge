@@ -1,25 +1,39 @@
-import { profileData } from "../data/data";
+import { sayfaVerileri, profileData } from "../data/data";
+import { useSiteContext } from "../context/SiteContext";
 
 function Hero() {
+  const { dil } = useSiteContext();
+  const hero = sayfaVerileri[dil].hero;
+
   return (
     <section className="hero">
       <div className="hero-left">
-        <p className="hero-small-text">Merhaba 👋</p>
+        <p className="hero-small-text">{hero.smallText}</p>
 
         <h1 className="hero-title">
-          Ben {profileData.name}. <br />
-          {profileData.title}
+          {hero.title} <br />
+          {hero.job}
         </h1>
 
-        <p className="hero-description">{profileData.description}</p>
+        <p className="hero-description">{hero.description}</p>
 
         <div className="hero-buttons">
-          <a className="hero-button" href={profileData.github} target="_blank" rel="noreferrer">
-            GitHub
+          <a
+            className="hero-button"
+            href={profileData.github}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {hero.githubText}
           </a>
 
-          <a className="hero-button secondary" href={profileData.linkedin} target="_blank" rel="noreferrer">
-            LinkedIn
+          <a
+            className="hero-button secondary"
+            href={profileData.linkedin}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {hero.linkedinText}
           </a>
         </div>
       </div>

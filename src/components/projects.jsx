@@ -1,32 +1,41 @@
-import { projects } from "../data/data";
+import { projects, sayfaVerileri } from "../data/data";
+import { useSiteContext } from "../context/SiteContext";
 
 function Projects() {
+  const { dil } = useSiteContext();
+  const yazi = sayfaVerileri[dil] || sayfaVerileri.tr;
+  const projectTexts = yazi.projectTexts;
+
   return (
     <section className="projects-section">
-      <h2 className="projects-title">Projects</h2>
+      <h2 className="projects-title">{yazi.projectsTitle}</h2>
 
       <div className="projects-list">
-        {projects.map((project) => (
-          <article className="project-card" key={project.id}>
-            <div className="project-image">Görsel</div>
+        {projects.map((project) => {
+          const projectText = projectTexts.find((item) => item.id === project.id);
 
-            <div className="project-info">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
+          return (
+            <article className="project-card" key={project.id}>
+              <div className="project-image">Görsel</div>
 
-              <div className="project-techs">
-               {project.araclar.map((arac, index) => (
-  <span key={index}>{arac}</span>
-))}
+              <div className="project-info">
+                <h3>{projectText.title}</h3>
+                <p>{projectText.description}</p>
+
+                <div className="project-techs">
+                  {project.araclar.map((arac, index) => (
+                    <span key={index}>{arac}</span>
+                  ))}
+                </div>
+
+                <div className="project-links">
+                  <a href={project.github || "#"}>{projectText.githubText}</a>
+                  <a href={project.live || "#"}>{projectText.liveText}</a>
+                </div>
               </div>
-
-              <div className="project-links">
-                <a href={project.github}>GitHub</a>
-                <a href={project.live}>View Site</a>
-              </div>
-            </div>
-          </article>
-        ))}
+            </article>
+          );
+        })}
       </div>
     </section>
   );
