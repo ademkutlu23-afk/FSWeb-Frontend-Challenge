@@ -1,3 +1,4 @@
+import developerAvatar from "../assets/developer-avatar.png";
 import { sayfaVerileri, profileData } from "../data/data";
 import { useSiteContext } from "../context/SiteContext";
 
@@ -40,7 +41,7 @@ function Hero() {
 
       <div className="hero-right">
         <div className="hero-image-placeholder">
-  <span className="avatar-text">AK</span>
+  <img src={developerAvatar} alt="Adem Kutlu illustration" />
 </div>
       </div>
     </section>

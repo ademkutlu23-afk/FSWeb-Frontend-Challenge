@@ -1,3 +1,4 @@
+import developerAvatar from "../assets/developer-avatar.png";
 import { profileInfo, sayfaVerileri } from "../data/data";
 import { useSiteContext } from "../context/SiteContext";
 
@@ -33,7 +34,7 @@ function Profile() {
         </div>
 
         <div className="profile-image-placeholder">
-  <span className="avatar-text">AK</span>
+  <img src={developerAvatar} alt="Adem Kutlu illustration" />
 </div>
 
         <div className="profile-about">

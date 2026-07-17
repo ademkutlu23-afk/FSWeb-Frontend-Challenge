@@ -16,7 +16,9 @@ function Projects() {
 
           return (
             <article className="project-card" key={project.id}>
-              <div className="project-image">Görsel</div>
+              <div className="project-image">
+  <span>{projectText.title}</span>
+</div>
 
               <div className="project-info">
                 <h3>{projectText.title}</h3>
