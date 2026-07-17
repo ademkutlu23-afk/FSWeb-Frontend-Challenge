@@ -11,8 +11,8 @@ function Contact() {
       const response = await axios.post(
         "https://jsonplaceholder.typicode.com/posts",
         {
-          name: "Adem Kutlu",
-          email: "ademkutlu23@gmail.com",
+          name: profileData.name,
+          email: profileData.email,
           message: "Portfolio contact link clicked",
         }
       );
@@ -31,10 +31,10 @@ function Contact() {
 
       <a
         className="contact-mail"
-        href="mailto:ademkutlu23@gmail.com"
+        href={`mailto:${profileData.email}`}
         onClick={handleContactClick}
       >
-        ademkutlu23@gmail.com
+        {profileData.email}
       </a>
 
       <div className="contact-links">
@@ -46,7 +46,10 @@ function Contact() {
           LinkedIn
         </a>
 
-        <a href="mailto:ademkutlu23@gmail.com" onClick={handleContactClick}>
+        <a
+          href={`mailto:${profileData.email}`}
+          onClick={handleContactClick}
+        >
           Email
         </a>
       </div>

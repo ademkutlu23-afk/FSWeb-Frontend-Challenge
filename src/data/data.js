@@ -1,7 +1,8 @@
 export const profileData = {
   name: "Adem Kutlu",
   github: "https://github.com/ademkutlu23-afk",
-  linkedin: "",
+  linkedin: "https://www.linkedin.com/in/adem-kutlu-1ab3413a0/",
+  email :"ademkutlu23@gmail.com"
 };
 
 export const profileInfo = {
