@@ -4,10 +4,13 @@ import Skills from "./components/Skills";
 import Profile from "./components/Profile";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import { useSiteContext } from "./context/SiteContext";
 
 function App() {
+  const { tema } = useSiteContext();
+
   return (
-    <main>
+    <main className={`app ${tema}`}>
       <Header />
       <Hero />
       <Skills />

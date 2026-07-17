@@ -372,3 +372,42 @@ button {
   font-weight: 700;
   color: #4731d3;
 }
+.app.dark {
+  background: #111827;
+  color: #ffffff;
+}
+
+.app.dark .header,
+.app.dark .hero,
+.app.dark .profile-section {
+  background: #171043;
+}
+
+.app.dark .skills-section,
+.app.dark .contact-section {
+  background: #111827;
+  color: #ffffff;
+}
+
+.app.dark .section-title,
+.app.dark .projects-title,
+.app.dark .contact-section h2 {
+  color: #cbf281;
+}
+
+.app.dark .skill-item span,
+.app.dark .contact-section p {
+  color: #d1d5db;
+}
+
+.app.dark .projects-section {
+  background: #1f2937;
+}
+
+.app.dark .project-card {
+  background: #ffffff;
+}
+
+.app.dark .hero-right {
+  background: #86efac;
+}
