@@ -243,6 +243,15 @@ button {
   display: flex;
   align-items: center;
   gap: 24px;
+
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-4px);
+  opacity: 0.85;
 }
 
 .skill-icon {
@@ -333,7 +342,17 @@ button {
   color: #ffffff;
 }
 
-.profile-info p,
+.profile-info p {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  column-gap: 20px;
+
+  font-size: 16px;
+  line-height: 1.55;
+  margin: 0 0 14px;
+  color: #ffffff;
+}
+
 .profile-about p {
   font-size: 16px;
   line-height: 1.55;
@@ -342,9 +361,6 @@ button {
 }
 
 .profile-info strong {
-  display: inline-block;
-  width: 120px;
-
   color: var(--green);
   font-weight: 700;
 }
@@ -375,40 +391,85 @@ button {
 
 .projects-section {
   background: var(--green);
-  padding: 70px var(--side-gap) 80px;
+  padding: 95px var(--side-gap) 80px;
+}
+
+.projects-top {
+  width: min(var(--container), 100%);
+  margin: 0 auto 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .projects-title {
-  width: min(var(--container), 100%);
-  margin: 0 auto 36px;
+  margin: 0;
 
   font-size: 42px;
   color: var(--purple);
 }
 
-.projects-list {
+.project-slider-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.project-slider-buttons button {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+
+  border: none;
+  background: var(--purple);
+  color: #ffffff;
+
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.project-slider-buttons button:hover {
+  opacity: 0.85;
+}
+
+.project-slider-page {
   width: min(var(--container), 100%);
   margin: 0 auto;
 
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
+
+  animation: slideFade 0.25s ease;
+}
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateX(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .project-card {
   background: #ffffff;
   border-radius: 12px;
-  padding: 24px;
+  padding: 20px;
 
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 28px;
+  display: flex;
+  flex-direction: column;
 
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
 }
 
 .project-image {
-  height: 160px;
+  height: 190px;
   border-radius: 8px;
   overflow: hidden;
 
@@ -420,50 +481,34 @@ button {
   justify-content: center;
   text-align: center;
 
-  font-size: 24px;
-  font-weight: 800;
+  margin-bottom: 18px;
 }
 
 .project-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
   display: block;
 }
 
-.project-logo-image {
-  background: #9ae6b4;
-  color: var(--text-dark);
-}
-
-.pati-project-logo {
+.project-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 12px;
-
-  color: var(--text-dark);
-  font-weight: 800;
-}
-
-.pati-project-logo svg {
-  width: 48px;
-  height: 48px;
-}
-
-.pati-project-logo span {
-  font-size: 22px;
+  flex: 1;
 }
 
 .project-info h3 {
   margin: 0 0 12px;
   color: var(--purple);
+  font-size: 22px;
 }
 
 .project-info p {
   margin: 0 0 16px;
   line-height: 1.5;
   color: #374151;
+  font-size: 15px;
 }
 
 .project-techs {
@@ -487,6 +532,7 @@ button {
 .project-links {
   display: flex;
   gap: 16px;
+  margin-top: auto;
 }
 
 .project-links a {
@@ -494,6 +540,50 @@ button {
   font-size: 13px;
   font-weight: 700;
   text-decoration: underline;
+}
+
+.project-dots {
+  width: min(var(--container), 100%);
+  margin: 24px auto 0;
+
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.project-dots button {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+
+  border: none;
+  background: rgba(71, 49, 211, 0.35);
+  cursor: pointer;
+}
+
+.project-dots .active-dot {
+  width: 28px;
+  border-radius: 999px;
+  background: var(--purple);
+}
+
+.pati-project-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  color: var(--text-dark);
+  font-weight: 800;
+}
+
+.pati-project-logo svg {
+  width: 48px;
+  height: 48px;
+}
+
+.pati-project-logo span {
+  font-size: 24px;
 }
 
 /* CONTACT */
@@ -550,6 +640,7 @@ button {
   opacity: 0.75;
   transform: translateY(-2px);
 }
+
 /* DARK MODE */
 
 .app.dark {
@@ -608,6 +699,24 @@ button {
 .app.dark .project-techs span {
   background: var(--purple);
   color: #ffffff;
+}
+
+.app.dark .project-slider-buttons button {
+  background: var(--green);
+  color: var(--purple-dark);
+}
+
+.app.dark .project-dots button {
+  background: rgba(203, 242, 129, 0.35);
+}
+
+.app.dark .project-dots .active-dot {
+  background: var(--green);
+}
+
+.app.dark .contact-mail,
+.app.dark .contact-links a {
+  color: var(--green);
 }
 
 /* RESPONSIVE */
@@ -782,8 +891,9 @@ button {
 
   .profile-title,
   .profile-content,
-  .projects-title,
-  .projects-list {
+  .projects-top,
+  .project-slider-page,
+  .project-dots {
     width: 100%;
   }
 
@@ -792,8 +902,8 @@ button {
     gap: 32px;
   }
 
-  .profile-info strong {
-    width: 115px;
+  .profile-info p {
+    grid-template-columns: 115px minmax(0, 1fr);
   }
 
   .profile-image-placeholder {
@@ -802,23 +912,30 @@ button {
     aspect-ratio: 4 / 3;
   }
 
+  .projects-section {
+    padding-top: 70px;
+  }
+
   .projects-title {
     font-size: 32px;
   }
 
-  .project-card {
+  .project-slider-page {
     grid-template-columns: 1fr;
+  }
+
+  .project-card {
     padding: 24px;
   }
 
   .project-image {
-    height: 180px;
+    height: 210px;
   }
 
   .contact-links {
-  flex-direction: row;
-  gap: 18px;
-}
+    flex-direction: row;
+    gap: 18px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -915,10 +1032,13 @@ button {
     font-size: 12px;
   }
 
+  .profile-info p {
+    grid-template-columns: 1fr;
+    row-gap: 4px;
+  }
+
   .profile-info strong {
     display: block;
-    width: auto;
-    margin-bottom: 4px;
   }
 
   .profile-image-placeholder {
@@ -927,8 +1047,22 @@ button {
     aspect-ratio: 4 / 3;
   }
 
+  .projects-top {
+    align-items: center;
+  }
+
+  .project-slider-buttons button {
+    width: 36px;
+    height: 36px;
+    font-size: 24px;
+  }
+
   .project-card {
     padding: 20px;
+  }
+
+  .project-image {
+    height: 165px;
   }
 
   .project-links {

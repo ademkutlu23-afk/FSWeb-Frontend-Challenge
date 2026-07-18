@@ -28,12 +28,19 @@ function Skills() {
 
       <div className="skills-list">
         {skills.map((skill) => (
-          <div className="skill-item" key={skill.id}>
+          <a
+            className="skill-item"
+            key={skill.id}
+            href={skill.link}
+            target="_blank"
+            rel="noreferrer"
+          >
             <div className={`skill-icon ${skill.name.toLowerCase()}`}>
-  {skillIcons[skill.name]}
-</div>
+              {skillIcons[skill.name]}
+            </div>
+
             <span>{skill.name}</span>
-          </div>
+          </a>
         ))}
       </div>
     </section>
