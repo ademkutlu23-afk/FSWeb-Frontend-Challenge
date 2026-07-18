@@ -5,19 +5,19 @@ function Header() {
 
   return (
     <header className="header">
-      <div className="logo">AK</div>
+      <div className="header-left">
+        <div className="logo">AK</div>
 
-      <nav className="nav">
-        <button className="nav-button" onClick={temaDegistir}>
+        <button className="nav-button language-button" onClick={dilDegistir}>
+          {dil === "tr" ? "SWITCH TO ENGLISH" : "TÜRKÇE'YE GEÇ"}
+        </button>
+      </div>
+
+      <div className="header-right">
+        <button className="nav-button theme-button" onClick={temaDegistir}>
           {tema === "light" ? "DARK MODE" : "LIGHT MODE"}
         </button>
-
-        <span className="divider">|</span>
-
-        <button className="nav-button" onClick={dilDegistir}>
-          {dil === "tr" ? "ENGLISH" : "TÜRKÇE"}
-        </button>
-      </nav>
+      </div>
     </header>
   );
 }

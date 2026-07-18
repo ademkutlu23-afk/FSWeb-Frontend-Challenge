@@ -1,4 +1,6 @@
 import axios from "axios";
+import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import { profileData, sayfaVerileri } from "../data/data";
 import { useSiteContext } from "../context/SiteContext";
 
@@ -38,19 +40,39 @@ function Contact() {
       </a>
 
       <div className="contact-links">
-        <a href={profileData.github} target="_blank" rel="noreferrer">
-          GitHub
+        <a
+          href={profileData.github}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="GitHub"
+        >
+          <FaGithub />
         </a>
 
-        <a href={profileData.linkedin || "#"} target="_blank" rel="noreferrer">
-          LinkedIn
+        <a
+          href={profileData.linkedin}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedinIn />
+        </a>
+
+        <a
+          href={profileData.instagram}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Instagram"
+        >
+          <FaInstagram />
         </a>
 
         <a
           href={`mailto:${profileData.email}`}
           onClick={handleContactClick}
+          aria-label="Email"
         >
-          Email
+          <MdEmail />
         </a>
       </div>
     </section>

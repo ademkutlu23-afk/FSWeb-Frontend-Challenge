@@ -2,7 +2,8 @@ export const profileData = {
   name: "Adem Kutlu",
   github: "https://github.com/ademkutlu23-afk",
   linkedin: "https://www.linkedin.com/in/adem-kutlu-1ab3413a0/",
-  email :"ademkutlu23@gmail.com"
+  email: "ademkutlu23@gmail.com",
+  instagram: "https://www.instagram.com/adocaine/",
 };
 
 export const profileInfo = {
@@ -114,7 +115,7 @@ export const sayfaVerileri = {
     ],
 
     contact: {
-      title: "İletişim",
+      title: "Bana mesaj gönder!",
       description:
         "Benimle iletişime geçmek istersen aşağıdaki bağlantıları kullanabilirsin.",
       emailText: "E-posta",
@@ -170,7 +171,7 @@ export const sayfaVerileri = {
     ],
 
     contact: {
-      title: "Contact",
+      title: "Send me a message!",
       description: "You can use the links below if you want to contact me.",
       emailText: "Email",
       githubText: "GitHub",
